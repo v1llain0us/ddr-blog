@@ -2,47 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DOODADR</title>
+  <title>DDR // Techno‑Worship since ‘05</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pacifico&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box}
-    html,body{margin:0;background:#000;color:#fff;font-family:'Press Start 2P',monospace;overflow-x:hidden}
-    body::before{content:"";position:fixed;inset:0;z-index:-2;background:repeating-linear-gradient(45deg,#000 0 50px,#0f0 51px,#f0f 52px,#0ff 53px,#000 54px);opacity:.12;animation:bg 3s steps(2) infinite}
-    @keyframes bg{50%{transform:translate(4px,4px)}}
+    :root{
+      --pink:#ff38ff;
+      --cyan:#00f7ff;
+      --bg1:#0b0020;
+      --grid:#1a0040;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;background:var(--bg1);color:#fff;font-family:'Press Start 2P',monospace;overflow-x:hidden}
 
-    /* full‑width logo */
-    .logo{width:100%;height:auto;display:block;image-rendering:pixelated;animation:hue 10s linear infinite,shake .2s steps(3,end) infinite}
-    @keyframes hue{to{filter:hue-rotate(360deg)}}
+    /* synthwave horizon */
+    body::before,body::after{content:"";position:fixed;left:0;right:0;z-index:-3}
+    body::before{top:0;height:50%;background:radial-gradient(ellipse at center,rgba(255,56,255,.4)0%,transparent 70%)}
+    body::after{bottom:0;height:50%;background:
+      repeating-linear-gradient(to top,var(--grid)0 2px,transparent 2px 62px),
+      linear-gradient(to top,rgba(0,0,0,.8),transparent)}
+      animation:gridMove 12s linear infinite;
+    }
+    @keyframes gridMove{from{background-position-y:0}to{background-position-y:-60px}}
+
+    /* FULL-WIDTH LOGO */
+    .logo{width:100%;height:auto;display:block;filter:drop-shadow(0 0 12px var(--pink));animation:hue 20s linear infinite,shake .25s steps(2,end) infinite}
+    @keyframes hue{to{filter:drop-shadow(0 0 12px var(--pink)) hue-rotate(360deg)}}
     @keyframes shake{50%{transform:translate(-1px,1px)}}
 
-    /* digital rain */
-    .rain{font-size:10px;line-height:10px;white-space:nowrap;overflow:hidden;color:#0f0;text-align:center;user-select:none;margin-bottom:2rem;animation:scroll 15s linear infinite}
-    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .sub{font-family:'Pacifico',cursive;font-size:clamp(18px,4vw,42px);color:var(--pink);text-align:center;margin:-1.2rem 0 3rem;text-shadow:0 0 8px var(--pink),0 0 18px var(--pink)}
 
-    /* posts */
-    .wrap{max-width:700px;margin:0 auto;padding:0 1rem 4rem}
-    .post{margin:3rem 0}
-    .post h2{font-size:1rem;color:#0f0;margin:.2rem 0}
-    .date{font-size:.7rem;color:#888;margin-bottom:.4rem}
+    .wrap{max-width:900px;margin:0 auto;padding:0 1rem 6rem}
 
-    footer{text-align:center;font-size:.7rem;color:#666;padding:3rem 1rem;border-top:1px solid #333}
+    /* Post cards */
+    .post{border:2px solid var(--cyan);background:rgba(0,255,255,.05);padding:2rem;margin:3rem 0;backdrop-filter:blur(3px);box-shadow:0 0 8px var(--cyan);transition:transform .3s}
+    .post:hover{transform:translateY(-6px) scale(1.02)}
+    .post h2{font-size:1rem;color:var(--cyan);margin-bottom:1rem}
+    .date{font-size:.7rem;color:#7ff;margin-bottom:.75rem}
+
+    footer{text-align:center;font-size:.7rem;color:#aaa;padding:4rem 1rem;border-top:1px solid var(--cyan);background:rgba(0,0,0,.3)}
   </style>
 </head>
 <body>
-  <!-- LOGO -->
-  <img src="FUCK.png" alt="logo" class="logo">
 
-  <!-- BINARY RAIN -->
-  <div class="rain">1010011100110010111001011001101100101110010110011011001011100101 1010011100110010111001011001101100101110010110011011001011100101 1010011100110010</div>
+  <!-- HERO LOGO -->
+  <img src="FUCK.png" alt="logo" class="logo">
+  <div class="sub">20 years of techno worship</div>
 
   <div class="wrap">
-    <!-- POSTS 2025 -->
-    <div class="post"><h2>🔌 12 May 2025 — Vision Pro 2 Hits Production</h2><div class="date">Apple’s carbon‑frame headset, lighter by 70 g, ships Q4.</div></div>
-    <div class="post"><h2>📱 08 Apr 2025 — Samsung Galaxy Ring Debuts</h2><div class="date">Titanium smart ring tracks O₂ + gesture controls, global rollout Q4.</div></div>
-    <div class="post"><h2>🤖 05 Jan 2025 — Gemini Ultra 2 On‑Device Demo</h2><div class="date">Qualcomm laptops run a 10B‑param model offline at &lt;120 ms latency.</div></div>
-    <div class="post"><h2>🎮 14 Mar 2025 — Nintendo Switch 2 Launch JP</h2><div class="date">Metroid Nova, Mario Kart X headline; DLSS‑Lite pushes 4K docked.</div></div>
-    <div class="post"><h2>🔊 26 Feb 2025 — Sony Pulse Neo Headset Review</h2><div class="date">0.9 ms latency, planar drivers, ¥24,800 — PS5 Pro ready.</div></div>
+    <!-- 2025 NEWS -->
+    <article class="post">
+      <h2>🔮 12 May 2025 – Vision Pro 2 Fabrication Leak</h2>
+      <div class="date">Carbon‑frame, 4‑nm M4‑SiP, shipping Q4.</div>
+      Apple’s second spatial headset drops 70 g and doubles micro‑OLED density. We’re ready to jack in.
+    </article>
+
+    <article class="post">
+      <h2>💍 08 Apr 2025 – Galaxy Ring Hands‑On</h2>
+      <div class="date">Titanium health tracker, gesture nav, Qi cradle.</div>
+      It senses SpO₂ and flick‑type gestures. Early firmware already cracked for MIDI control.
+    </article>
+
+    <article class="post">
+      <h2>🎮 14 Mar 2025 – Switch 2 Launch | Metroid Nova</h2>
+      <div class="date">DLSS‑Lite 4K docked, 1.9 TFLOPS handheld.</div>
+      First game carts are neon‑pink; Joy‑Cons glow under UV. Retro vibes, future frames.
+    </article>
+
+    <article class="post">
+      <h2>🔊 26 Feb 2025 – Pulse Neo Review Drop</h2>
+      <div class="date">Planar drivers, 0.9 ms latency, ¥24,800.</div>
+      We wired it into a VHS synth and the cans survived. Legit studio response in a gamer shell.
+    </article>
+
+    <article class="post">
+      <h2>🤖 05 Jan 2025 – Gemini Ultra 2 Offline Demo</h2>
+      <div class="date">10B‑param model running on‑device.</div>
+      Live translation <120 ms on Snapdragon 8 Gen 4. Future: pocket brain-lords.
+    </article>
   </div>
 
   <footer>(C) 2005 DOODADR/DOODADER/OUTER HEAVEN, VILLAINOUS BRAND, TOKYO JP 2025</footer>
