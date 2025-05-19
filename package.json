@@ -1,0 +1,12 @@
+{
+  "name": "villain-blog",
+  "version": "1.0.0",
+  "description": "Villainous Brand micro\u2011blog",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}

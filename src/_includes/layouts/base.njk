@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }} | Villain Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;background:#000;color:#fff;font-family:'Press Start 2P',monospace;
+    }
+    body::before{
+      content:'';position:fixed;inset:0;z-index:-1;
+      background:repeating-linear-gradient(45deg,#000 0 50px,#0f0 51px,#f0f 52px,#0ff 53px,#000 54px);
+      opacity:.12;animation:bg 2s steps(2) infinite;
+    }
+    @keyframes bg{50%{transform:translate(4px,4px)}}
+    a{color:#0ff;text-decoration:none}
+    .wrap{max-width:700px;margin:0 auto;padding:2rem}
+    h1,h2{margin:1rem 0}
+    .post-list li{margin:1rem 0}
+    .date{color:#0f0;font-size:.7rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1><a href="/">VILLAIN BLOG</a></h1>
+    {{ content | safe }}
+  </div>
+</body>
+</html>
