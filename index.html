@@ -2,72 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DDR Blog - Villainous Brand</title>
+  <title>DOODADR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      color: #fff;
-      font-family: 'Press Start 2P', monospace;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background: repeating-linear-gradient(45deg,#000 0 50px,#0f0 51px,#f0f 52px,#0ff 53px,#000 54px);
-      opacity: .12;
-      animation: bg 2s steps(2) infinite;
-    }
-    @keyframes bg { 50% { transform: translate(4px, 4px); } }
-    .container { max-width: 700px; margin: 4rem auto; padding: 2rem; }
-    h1 { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: #f0f; text-shadow: 0 0 5px #0ff; }
-    .logo { display: block; margin: 0 auto 2rem; width: 260px; image-rendering: pixelated; animation: hueSpin 8s infinite linear, jitter .15s infinite steps(3,end); }
-    @keyframes hueSpin { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
-    @keyframes jitter { 0% { transform: translate(0,0);} 50% { transform: translate(-1px,1px);} 100% { transform: translate(0,0);} }
-    .post { margin-bottom: 3rem; }
-    .post h2 { font-size: 1rem; color: #0f0; }
-    .date { color: #888; font-size: 0.7rem; margin-bottom: 0.5rem; }
-    iframe { margin-top: 1rem; max-width: 100%; }
-    footer { text-align: center; font-size: 0.75rem; color: #666; padding: 2rem; }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#000;color:#fff;font-family:'Press Start 2P',monospace;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:-2;background:repeating-linear-gradient(45deg,#000 0 50px,#0f0 51px,#f0f 52px,#0ff 53px,#000 54px);opacity:.12;animation:bg 3s steps(2) infinite}
+    @keyframes bg{50%{transform:translate(4px,4px)}}
+
+    /* full‑width logo */
+    .logo{width:100%;height:auto;display:block;image-rendering:pixelated;animation:hue 10s linear infinite,shake .2s steps(3,end) infinite}
+    @keyframes hue{to{filter:hue-rotate(360deg)}}
+    @keyframes shake{50%{transform:translate(-1px,1px)}}
+
+    /* digital rain */
+    .rain{font-size:10px;line-height:10px;white-space:nowrap;overflow:hidden;color:#0f0;text-align:center;user-select:none;margin-bottom:2rem;animation:scroll 15s linear infinite}
+    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    /* posts */
+    .wrap{max-width:700px;margin:0 auto;padding:0 1rem 4rem}
+    .post{margin:3rem 0}
+    .post h2{font-size:1rem;color:#0f0;margin:.2rem 0}
+    .date{font-size:.7rem;color:#888;margin-bottom:.4rem}
+
+    footer{text-align:center;font-size:.7rem;color:#666;padding:3rem 1rem;border-top:1px solid #333}
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="FUCK.png" alt="Logo" class="logo">
-    <h1>DDR BLOG // VILLAIN ARC</h1>
+  <!-- LOGO -->
+  <img src="FUCK.png" alt="logo" class="logo">
 
-    <!-- 2025 REAL NEWS POSTS -->
-    <div class="post">
-      <h2>🌀 12 May 2025 — Vision Pro 2 ships worldwide</h2>
-      <div class="date">Apple finally launched the second‑gen spatial headset with a lighter carbon frame and a 4‑nm M4‑SIP. Early teardown reveals the pancake lenses are 30% slimmer than v1.</div>
-    </div>
+  <!-- BINARY RAIN -->
+  <div class="rain">1010011100110010111001011001101100101110010110011011001011100101 1010011100110010111001011001101100101110010110011011001011100101 1010011100110010</div>
 
-    <div class="post">
-      <h2>📱 08 Apr 2025 — Samsung shows Galaxy Ring at Unpacked 2025</h2>
-      <div class="date">The titanium smart ring tracks blood‑oxygen, gesture control, and charges wirelessly inside the watch cradle. Korean release in July, global roll‑out Q4.</div>
-    </div>
-
-    <div class="post">
-      <h2>🎮 14 Mar 2025 — Nintendo Switch 2 hits Japan</h2>
-      <div class="date">Launch titles: Metroid Nova, Mario Kart X, and a Famicom‑style virtual console. Handheld mode benchmark clocks 1.9 TFLOPS; docked pushes 4K upscaling via DLSS‑Lite.</div>
-    </div>
-
-    <div class="post">
-      <h2>🔊 26 Feb 2025 — Sony’s Pulse Neo wireless headset review drop</h2>
-      <div class="date">0.9 ms latency in USB‑C mode, planar drivers, and a detachable boom mic with AI noise‑strip. Priced at ¥24,800 — cheaper than we expected.</div>
-    </div>
-
-    <div class="post">
-      <h2>🤖 05 Jan 2025 — OpenAI Gemini Ultra 2 demo at CES</h2>
-      <div class="date">The on‑device model runs on Qualcomm’s X Elite laptops, holding a 10B param subset offline. Live translation lag averages 120 ms — insane.</div>
-    </div>
+  <div class="wrap">
+    <!-- POSTS 2025 -->
+    <div class="post"><h2>🔌 12 May 2025 — Vision Pro 2 Hits Production</h2><div class="date">Apple’s carbon‑frame headset, lighter by 70 g, ships Q4.</div></div>
+    <div class="post"><h2>📱 08 Apr 2025 — Samsung Galaxy Ring Debuts</h2><div class="date">Titanium smart ring tracks O₂ + gesture controls, global rollout Q4.</div></div>
+    <div class="post"><h2>🤖 05 Jan 2025 — Gemini Ultra 2 On‑Device Demo</h2><div class="date">Qualcomm laptops run a 10B‑param model offline at &lt;120 ms latency.</div></div>
+    <div class="post"><h2>🎮 14 Mar 2025 — Nintendo Switch 2 Launch JP</h2><div class="date">Metroid Nova, Mario Kart X headline; DLSS‑Lite pushes 4K docked.</div></div>
+    <div class="post"><h2>🔊 26 Feb 2025 — Sony Pulse Neo Headset Review</h2><div class="date">0.9 ms latency, planar drivers, ¥24,800 — PS5 Pro ready.</div></div>
   </div>
 
-  <footer>&copy; 2025 DDR x Villainous Brand // Outer Heaven</footer>
+  <footer>(C) 2005 DOODADR/DOODADER/OUTER HEAVEN, VILLAINOUS BRAND, TOKYO JP 2025</footer>
 </body>
 </html>
