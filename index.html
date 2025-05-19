@@ -2,44 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DDR // Techno‑Worship</title>
+  <title>DDR // Techno‑Worship Headlines 2025</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pacifico&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --pink:#ff38ff;
-      --cyan:#00f7ff;
-      --green:#00ff7e;
-      --bg1:#0b0020;
-      --grid:#17003a;
-    }
+    :root{--pink:#ff38ff;--cyan:#00f7ff;--green:#00ff7e;--bg1:#0b0020;--grid:#17003a}
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{background:var(--bg1);color:#fff;font-family:'Press Start 2P',monospace;overflow-x:hidden}
-
-    /* synth horizon & animated grid */
     body::before,body::after{content:"";position:fixed;left:0;right:0;z-index:-3}
     body::before{top:0;height:55%;background:radial-gradient(ellipse at center,rgba(255,56,255,.45)0%,transparent 70%);animation:pulse 6s ease-in-out infinite}
-    body::after{bottom:0;height:50%;background:
-      repeating-linear-gradient(to top,var(--grid)0 2px,transparent 2px 62px),
-      linear-gradient(to top,rgba(0,0,0,.8),transparent);animation:grid 12s linear infinite}
-    @keyframes pulse{50%{filter:blur(2px) brightness(1.3)}}
-    @keyframes grid{to{background-position-y:-60px}}
+    body::after{bottom:0;height:50%;background:repeating-linear-gradient(to top,var(--grid)0 2px,transparent 2px 62px),linear-gradient(to top,rgba(0,0,0,.8),transparent);animation:grid 12s linear infinite}
+    @keyframes pulse{50%{filter:blur(2px) brightness(1.3)}}@keyframes grid{to{background-position-y:-60px}}
 
-    /* LOGO */
-    .logo{width:100%;height:auto;display:block;image-rendering:pixelated;filter:drop-shadow(0 0 25px var(--pink)) drop-shadow(0 0 45px var(--pink));
-          animation:hue 12s linear infinite,shake .15s steps(2,end) infinite}
-    @keyframes hue{to{filter:drop-shadow(0 0 25px var(--pink)) drop-shadow(0 0 45px var(--pink)) hue-rotate(360deg)}}
-    @keyframes shake{50%{transform:translate(-1px,1px)}}
+    .logo{width:100%;image-rendering:pixelated;filter:drop-shadow(0 0 25px var(--pink)) drop-shadow(0 0 45px var(--pink));animation:hue 12s linear infinite,shake .15s steps(2,end) infinite}
+    @keyframes hue{to{filter:drop-shadow(0 0 25px var(--pink)) drop-shadow(0 0 45px var(--pink)) hue-rotate(360deg)}}@keyframes shake{50%{transform:translate(-1px,1px)}}
 
-    /* Binary worship strip */
-    .binary-bar{
-      width:100%;white-space:nowrap;overflow:hidden;font-size:12px;line-height:12px;margin-top:-1rem;color:var(--green);text-align:center;animation:scroll 25s linear infinite}
-    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .binary-bar{white-space:nowrap;overflow:hidden;font-size:12px;line-height:12px;margin-top:-1rem;color:var(--green);text-align:center;animation:scroll 25s linear infinite}
+    @keyframes scroll{100%{transform:translateX(-50%)}}
+    .phrase{font-family:'Pacifico',cursive;font-size:clamp(14px,4.5vw,38px);color:var(--pink);text-align:center;margin:1.5rem 0;text-shadow:0 0 12px var(--pink),0 0 25px var(--pink)}
 
-    /* Binary phrase */
-    .phrase{font-size:clamp(14px,4.5vw,38px);font-family:'Pacifico',cursive;color:var(--pink);text-align:center;margin:1.5rem 0;text-shadow:0 0 12px var(--pink),0 0 25px var(--pink)}
-
-    /* post cards */
     .wrap{max-width:900px;margin:0 auto;padding:0 1rem 6rem}
     .post{border:2px solid var(--cyan);background:rgba(0,255,255,.06);padding:2rem;margin:3rem 0;backdrop-filter:blur(4px);box-shadow:0 0 6px var(--cyan);transition:transform .3s}
     .post:hover{transform:translateY(-6px) scale(1.02)}
@@ -50,20 +31,32 @@
   </style>
 </head>
 <body>
-
-  <!-- Logo with exaggerated glow -->
   <img src="FUCK.png" alt="LOGO" class="logo">
-
-  <!-- Binary techno worship bar & phrase -->
   <div class="phrase">20 years of techno worship</div>
-  <div class="binary-bar">01010100 01000101 01000011 01001000 01001110 01001111 01010111 01001111 01010010 01010011 01001000 01001001 01010000 01010100 01000101 01000011 01001000 01001110 01001111 01010111 01001111 01010010 01010011 01001000 01001001 01010000 </div>
+  <div class="binary-bar">01010100 01000101 01000011 01001000 01001110 01001111 01010111 01001111 01010010 01010011 01001000 01001001 01010000</div>
 
   <div class="wrap">
-    <article class="post"><h2>🔮 12 May 2025 – Vision Pro 2 Fabrication Leak</h2><div class="date">Carbon-frame, 4‑nm M4‑SiP, shipping Q4</div>Apple’s second spatial headset drops 70 g and doubles micro‑OLED density. We’re ready to jack in.</article>
-    <article class="post"><h2>💍 08 Apr 2025 – Galaxy Ring Hands‑On</h2><div class="date">Titanium health tracker, gesture nav, Qi cradle</div>It senses SpO₂ and flick‑type gestures. Early firmware already cracked for MIDI control.</article>
-    <article class="post"><h2>🎮 14 Mar 2025 – Switch 2 Launch | Metroid Nova</h2><div class="date">DLSS‑Lite 4K docked, 1.9 TFLOPS handheld</div>Launch carts are neon-pink; Joy‑Cons glow under UV. Retro vibes, future frames.</article>
-    <article class="post"><h2>🔊 26 Feb 2025 – Pulse Neo Review Drop</h2><div class="date">0.9 ms latency, planar drivers, ¥24,800</div>We wired it into a VHS synth and the cans survived. Legit studio response in a gamer shell.</article>
-    <article class="post"><h2>🤖 05 Jan 2025 – Gemini Ultra 2 Offline Demo</h2><div class="date">10 B param model running on‑device</div>Live translation &lt;120 ms on Snapdragon 8 Gen 4. Pocket brain‑lords are here.</article>
+    <article class="post"><h2>🔮 Vision Pro 2 Fabrication Leak</h2><div class="date">12 May 2025</div>Apple’s carbon‑framed face computer cuts 70 g and doubles the pixel punch—perfect for ignoring reality in lighter comfort.</article>
+
+    <article class="post"><h2>💍 Galaxy Ring Hands‑On</h2><div class="date">08 Apr 2025</div>Samsung’s titanium finger halo tracks blood‑oxygen, reads gestures, and charges in a sci‑fi cradle—because watches are so last decade.</article>
+
+    <article class="post"><h2>🎮 Switch 2 Launch | Metroid Nova</h2><div class="date">14 Mar 2025</div>Nintendo finally hit HD puberty: DLSS‑Lite 4 K docked and neon Joy‑Cons so bright they double as rave sticks.</article>
+
+    <article class="post"><h2>🕹️ PlayStation 5 Pro Drops</h2><div class="date">17 Sep 2025</div>Sony’s gym‑bro PS5 flexes 8 K marketing muscles—67 % more GPU for roughly 12 % more wow, but hey, abs are abs.</article>
+
+    <article class="post"><h2>🤖 Tesla Optimus Dance‑Off</h2><div class="date">21 Jun 2025</div>Elon’s humanoid shuffles like a caffeinated Roomba, but apparently that’s a multi‑trillion‑dollar moonwalk—bless his metal heart.</article>
+
+    <article class="post"><h2>🧠 Gemini Ultra 2 Offline Demo</h2><div class="date">15 Feb 2025</div>OpenAI stuffed 10 B parameters in your laptop—now it can translate your breakup text before autocorrect ruins it.</article>
+
+    <article class="post"><h2>💡 LED Couture Blinds Paris</h2><div class="date">30 Mar 2025</div>Runway teens stomped in dresses brighter than Times Square—the cyberpunk priesthood approves.</article>
+
+    <article class="post"><h2>🕶️ Valve “Deckard” VR Leak</h2><div class="date">22 Apr 2025</div>Rumors say \$1.2 K headset so crisp reality feels laggy—release date TBD, so keep feeding that hype hamster.</article>
+
+    <article class="post"><h2>🚗 Futuristic Car Dash Goes IMAX</h2><div class="date">09 Jan 2025</div>BMW’s dash‑spanning screen turns speedometers into cinema; Honda’s Level 3 autopilot lets you binge safely-ish.</article>
+
+    <article class="post"><h2>🦾 Cybertruck Finally Ships</h2><div class="date">30 Nov 2025</div>Polygonal tank hits streets—bullet‑glass (allegedly) and 2.6 s 0‑60 for your daily grocery warzone.</article>
+
+    <article class="post"><h2>🔥 Razer’s AI Gamer Throne</h2><div class="date">11 Jan 2025</div>Project Arielle keeps your butt climate‑controlled while an AI coach whispers cheat codes—peak gamer decadence unlocked.</article>
   </div>
 
   <footer>2005‑2025 // DOODADR ∙ DOODADER ∙ OUTER HEAVEN ∙ VILLAINOUS BRAND ∙ TOKYO JP</footer>
